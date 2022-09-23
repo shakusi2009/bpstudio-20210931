@@ -1216,8 +1216,8 @@ type ListApplicationResponseBodyData struct {
 	Name *string `json:"Name,omitempty" xml:"Name,omitempty"`
 	// 应用的资源组
 	ResourceGroupId *string `json:"ResourceGroupId,omitempty" xml:"ResourceGroupId,omitempty"`
-	// 应用的状态
-	Status *int32 `json:"Status,omitempty" xml:"Status,omitempty"`
+	// 应用状态
+	Status *string `json:"Status,omitempty" xml:"Status,omitempty"`
 	// 应用的拓扑图链接
 	TopoURL *string `json:"TopoURL,omitempty" xml:"TopoURL,omitempty"`
 }
@@ -1255,7 +1255,7 @@ func (s *ListApplicationResponseBodyData) SetResourceGroupId(v string) *ListAppl
 	return s
 }
 
-func (s *ListApplicationResponseBodyData) SetStatus(v int32) *ListApplicationResponseBodyData {
+func (s *ListApplicationResponseBodyData) SetStatus(v string) *ListApplicationResponseBodyData {
 	s.Status = &v
 	return s
 }
